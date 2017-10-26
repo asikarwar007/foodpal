@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html ng-app="angularjsNodejsTutorial">
     <head>
-        <title>Integrating AngularJS with NodeJS</title>
+        <title>foodpal</title>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
-        <script src="javascripts/app.js" type="text/javascript"></script> <!-- not created yet -->
+        <script src="javascripts/app.js" type="text/javascript"></script>
+        <script src="javascripts/search.js" type="text/javascript"></script>
     </head>
     <body >
+      <!-- <div ng-controller="formCtrl">
+        <!-- <form novalidate>
+          First Name:<br>
+          <input type="text" ng-model="user.firstName"><br>
+
+          <button >RESET</button>
+        </form>
+          <p>form = {{user.firstName}}</p>
+          <p>master = {{master.lastName}}</p> -->
+
+    <!-- </div> --> 
         <div ng-controller="myController">
+          <!-- <form ng-submit="addToList()">
+<table>
+            <tr>
+                <td>First name:</td><td><input type="text"
+
+                ng-model="profileFirstName"  size="50" ></td>
+
+            </tr>
+         </table>
+      <div > Please search the list to check the newly added item
+      <input class="btn-primary" type="submit"
+
+      value="add"></div>
+      </form> -->
           <ul >
             <li ng-repeat="x in data.data">
                 <!-- <img src="{{ x.images.original.url }}"> -->
@@ -14,11 +40,10 @@
               </li>
 </ul>
 
-<!--
-<div *ngFor="let g of giphies">
-	<img src="{{g.images.original.url}}">
-</div> -->
-
+<script>
+            function onSearch(value) {
+              console.log(value);
+            }</script>
         </div>
     </body>
 </html>
